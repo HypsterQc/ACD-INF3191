@@ -1,0 +1,22 @@
+{% extends "basehead.html" %}
+
+{% block title %}Page d'erreur 404{% endblock %}
+
+{% set page = "page404" %}
+
+<!--Menu-->
+{% block header %} 
+    {% include "menu.html" %} 
+{% endblock %} 
+
+{% block content %}
+<section>
+   <h1>Erreur 404</h1>
+   <p>Page non trouvez</p>
+   <img src="image/fond_animal2.png" alt="Une image de fond ecran animal">
+</section>
+{% endblock %} 
+
+{% block footer %} 
+    {% include "piedpage.html" %} 
+{% endblock %}

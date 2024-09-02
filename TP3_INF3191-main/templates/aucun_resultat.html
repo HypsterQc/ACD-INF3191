@@ -1,0 +1,45 @@
+{% extends "basehead.html" %}
+
+{% block title %}Recherche{% endblock %}
+
+{% set page = "perdu" %}
+
+<!--Menu-->
+{% block header %} 
+    {% include "menu.html" %} 
+{% endblock %} 
+
+{% block content %}
+<section>
+   <div>
+      <h2>Recherche introuvable</h2>
+      <p>
+        Malheureusement nous ne trouvons pas votre recherche.
+        nous vous suggerons dadopter ceux ci.
+      </p>
+   </div>
+
+   <div class="animaux"><h2><u>Option</u></h2></div>
+   <div id="option_animaux">
+       {% for i in range(1, 6) %}
+           <div>
+               <strong><u>Animal #{{animaux[i]['id']}}</u> </strong>
+               <p>Nom: {{animaux[i]['nom']}}</p>
+               <p>Espèce: {{animaux[i]['espece']}}</p>
+               <p>Race: {{animaux[i]['race']}}</p>
+               <p>Age: {{animaux[i]['age']}}</p>
+               <p></p>
+               <br>
+               <form action="/presentation/" method="GET">
+                   <input type="hidden" name="animal_id" value="{{animaux[i]['id']}}">
+                   <button type="submit">Informations</button>
+               </form>
+           </div>
+       {% endfor %}
+   </div>
+</section>
+{% endblock %} 
+
+{% block footer %} 
+    {% include "piedpage.html" %} 
+{% endblock %}

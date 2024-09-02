@@ -1,0 +1,51 @@
+{% extends "basehead.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% set page = "accueil" %}
+
+<!--Menu-->
+{% block header %} 
+    {% include "menu.html" %} 
+{% endblock %} 
+
+{% block content %}
+<div class="image_decoration">
+    <img src="image/imageDecoration.jpeg" alt="Une image de chien sur du gazon">
+</div>
+
+<div class="description_site">
+    <div>
+        <h2>Un foyer pour chaque animal, une famille pour chaque cœur</h2>
+    </div>
+    <div class="explication">
+        Notre site web d'adoption est un endroit où les amoureux des animaux peuvent trouver leur 
+        compagnon idéal. Nous sommes déterminés à aider les animaux à trouver leur foyer pour la vie en connectant
+        des familles aimantes avec des animaux de compagnie qui ont besoin d'un foyer. Notre site web offre une 
+        variété d'animaux de compagnie, tels que des chiens, des chats, des lapins et même des oiseaux, 
+        chacun avec une description détaillée de leur personnalité, de leur histoire et de leurs besoins. 
+    </div>
+</div>
+<div class="animaux"><h2><u>Option</u></h2></div>
+<div id="option_animaux">
+    {% for i in range(1, 6) %}
+        <div>
+            <strong><u>Animal #{{animaux[i]['id']}}</u> </strong>
+            <p>Nom: {{animaux[i]['nom']}}</p>
+            <p>Espèce: {{animaux[i]['espece']}}</p>
+            <p>Race: {{animaux[i]['race']}}</p>
+            <p>Age: {{animaux[i]['age']}}</p>
+            <p></p>
+            <br>
+            <form action="/presentation/">
+                <input type="hidden" name="animal_id" value="{{animaux[i]['id']}}">
+                <button type="submit">Informations</button>
+            </form>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %} 
+
+{% block footer %} 
+    {% include "piedpage.html" %} 
+{% endblock %}

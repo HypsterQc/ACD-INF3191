@@ -1,0 +1,146 @@
+{% extends "basehead.html" %}
+
+{% block title %}Formulaire{% endblock %}
+
+{% set page = "form" %}
+
+<!--Menu-->
+{% block header %} 
+    {% include "menu.html" %} 
+{% endblock %} 
+
+{% block content %}
+<section>
+<div class="contenuForm">
+    <section>
+        <div class="premierblock">
+            <img src="" alt="" />
+            <h1>Mise en adoption</h1>
+            <h2>Vous chercher une nouvelle maison pour votre toutou</h2>
+            <p>Nous sommes la pour vous aidez a mettre en adoption votre animal de compagnie.</p>
+        </div>
+        <div id="question0">
+            <p>Commencer a remplire le formulaire.</p>
+            <button onclick="commencer_Formulaire()">Cliquez ici</button>
+        </div>
+        <div>
+            <img src="" alt="image de chien en fond" />
+        </div>
+
+        <div class="deuxiemeblock">
+            <form id="verifieForm">
+                <div class="question" id="question1">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Nom" />
+                    <p class="message_erreur" id="err_nom"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question2">
+                    <label for="espece">Espèce :</label>
+                    <input type="text" id="espece" name="espece" placeholder="Espece" />
+                    <p class="message_erreur" id="err_espece"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question3">
+                    <label for="race">Race :</label>
+                    <input type="text" id="race" name="race" placeholder="Race" />
+                    <p class="message_erreur" id="err_race"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question4">
+                    <label for="age">Âge :</label>
+                    <input type="number" id="age" name="age" placeholder="00" />
+                    <p class="message_erreur" id="err_age"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question5">
+                    <label for="description">Description :</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Couleur, Atitude, Sociable, Aime les enfant..."></textarea>
+                    <p class="message_erreur" id="err_description"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question6">
+                    <label for="email">Adresse courriel :</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="exemple@exemple.exemple" />
+                    <p class="message_erreur" id="err_email"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question7">
+                    <label for="adresse">Adresse civique :</label>
+                    <input
+                        type="text"
+                        id="adresse"
+                        name="adresse"
+                        placeholder="00 rue exemple visuel" />
+                    <p class="message_erreur" id="err_adresse"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question8">
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="ville" placeholder="Exemple : Ville" />
+                    <p class="message_erreur" id="err_ville"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question9">
+                    <label for="codepostal">Code postal :</label>
+                    <input
+                        type="text"
+                        id="codepostal"
+                        name="codepostal"
+                        placeholder="Exemple : H1H 1H1" />
+                    <p class="message_erreur" id="err_codepostal"></p>
+                </div>
+
+                <br /><br />
+
+                <div class="question" id="question10">
+                    <p>Votre Formulaire est pret a l'envois</p>
+                    <input type="submit" value="Envoyer" />
+                </div>
+            </form>
+        </div>
+
+        
+        <div id="messageErreur"></div>
+
+
+        <div class="troisiemeblock">
+            <h3>{{ nb_animaux }}</h3>
+            <p>En adoption actuellement</p>
+            <h3>357</h3>
+            <p>On trouver une maison</p>
+            <h3>89%</h3>
+            <p>Client satisfait</p>
+        </div>
+    </section>
+</div>
+</section>
+<script src="script.js"></script>
+{% endblock %} 
+
+{% block footer %} 
+    {% include "piedpage.html" %} 
+{% endblock %}

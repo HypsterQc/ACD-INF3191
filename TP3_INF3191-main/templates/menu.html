@@ -1,0 +1,29 @@
+<header class="haut_page">
+   <div class="titre">
+       <h1>KLOR</h1>
+   </div>
+   <div class="option">
+       <div class="acceuil">
+           {% if page != 'accueil' %}
+           <a href="/">Accueil</a>
+           {% else %} Accueil {% endif %}
+       </div>
+       <div class="mettre_adoption">
+           {% if page != 'form' %}
+           <a href="/form">Mettre en adoption</a>
+           {% else %} Mettre en adoption {% endif %}
+       </div>
+       <div class="adopter">
+           {% if page != 'recherche' %}
+           <a href="{{ url_for('recherche') }}">Adopter</a>
+           {% else %} Adopter {% endif %}
+       </div>
+   </div>
+   <div class="barre_recherche">
+      <form action="/trouver_resultat">
+          <label>Recherche :</label>
+          <input type="text" name="choix_recherche">
+          <button type="submit">Rechercher</button>
+        </form>
+  </div>
+</header>

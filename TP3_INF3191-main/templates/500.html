@@ -1,0 +1,25 @@
+
+{% extends "basehead.html" %}
+
+{% block title %}Page d'erreur 500{% endblock %}
+
+{% set page = "page500" %}
+
+<!--Menu-->
+{% block header %} 
+    {% include "menu.html" %} 
+{% endblock %} 
+
+{% block content %}
+<section>
+
+   <h1>Erreur 500</h1>
+   <p>Esseiller plus tard</p>
+   <img src="image/fond_animal2.png" alt="Une image de fond ecran animal">
+
+</section>
+{% endblock %} 
+
+{% block footer %} 
+    {% include "piedpage.html" %} 
+{% endblock %}

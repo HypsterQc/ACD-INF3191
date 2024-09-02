@@ -1,0 +1,33 @@
+{% extends "basehead.html" %} {% block title %}Recherche{% endblock %} {% set page = "trouver" %}
+
+<!--Menu-->
+{% block header %} {% include "menu.html" %} {% endblock %} {% block content %}
+<section>
+    <div>
+        <div>
+            <h2>Voici vos resultat</h2>
+        </div>
+
+        <div class="animaux">
+            <h2><u>Option</u></h2>
+        </div>
+        <div id="option_animaux">
+            {% for animal in resultats %}
+            <div>
+                <strong><u>Animal #{{animal['id']}}</u> </strong>
+                <p>Nom: {{animal['nom']}}</p>
+                <p>Espèce: {{animal['espece']}}</p>
+                <p>Race: {{animal['race']}}</p>
+                <p>Age: {{animal['age']}}</p>
+                <p></p>
+                <br />
+                <form action="/presentation/" method="GET">
+                    <input type="hidden" name="animal_id" value="{{animal['id']}}" />
+                    <button type="submit">Informations</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %} {% block footer %} {% include "piedpage.html" %} {% endblock %}

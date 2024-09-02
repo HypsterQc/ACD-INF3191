@@ -1,0 +1,88 @@
+{% extends "basehead.html" %} 
+
+{% block title %}Presentation{% endblock %} 
+{% set page = "presentation" %}
+
+<!--Menu-->
+{% block header %} 
+    {% include "menu.html" %} 
+{% endblock %} 
+
+{% block content %}
+<section>
+    <div class="contenuPresent">
+        <div class="premierblock">
+            <h1>Nom: {{ animal['nom'] }}</h1>
+            <p>Description: {{ animal['description'] }}</p>
+            <a href="mailto:{{ animal['courriel'] }}">Adopter</a>
+        </div>
+
+        <div class="deuxiemeblock">
+            <article>
+                <h2>Espece: {{ animal['espece'] }}</h2>
+                <p></p>
+            </article>
+
+            <article>
+                <h2>Race: {{ animal['race'] }}</h2>
+                <p></p>
+            </article>
+
+            <article>
+                <h2>Age: {{ animal['age'] }}</h2>
+                <p></p>
+            </article>
+        </div>
+
+        <div class="troisiemeblock">
+            <div>
+                <article>
+                    <header>
+                        <img src="" alt="" />
+                    </header>
+                    <section>
+                        <p>Nom: {{ animal['nom'] }}</p>
+                        <p>Espece: {{ animal['espece'] }}</p>
+                        <p>Race: {{ animal['race'] }}</p>
+                        <p>Age: {{ animal['age'] }}</p>
+                    </section>
+                </article>
+            </div>
+
+            <div>
+                <article>
+                    <header>
+                        <img src="" alt="" />
+                    </header>
+                    <section></section>
+                </article>
+            </div>
+        </div>
+
+        <div class="quatriemeblock">
+            <article>
+                <h2>Email: 
+                    <a href="mailto:{{ animal['courriel'] }}">
+                        {{ animal['courriel'] }}
+                    </a>
+                </h2>
+                <p>
+                    <a href="mailto:{{ animal['courriel'] }}">Envoyer un email</a>
+                </p>
+            </article>
+
+            <article>
+                <h2>Adresse: {{ animal['adresse'] }}</h2>
+                <p>Ville: {{ animal['ville'] }}</p>
+                <p>Code Postal: {{ animal['cp'] }}</p>
+            </article>
+        </div>
+
+        <div class="cinquiemeblock"></div>
+    </div>
+</section>
+{% endblock %} 
+
+{% block footer %} 
+    {% include "piedpage.html" %} 
+{% endblock %}
