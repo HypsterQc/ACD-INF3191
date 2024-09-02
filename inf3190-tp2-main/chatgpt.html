@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gestionnaire d'erreur</title>
+  </head>
+  <body>
+    <form onsubmit="return validerForm(event)">
+      <label for="nombre1">Nombre 1 :</label>
+      <input type="number" id="nombre1" name="nombre1"><br><br>
+      <label for="nombre2">Nombre 2 :</label>
+      <input type="number" id="nombre2" name="nombre2"><br><br>
+      <button type="submit">Diviser</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+      function validerForm(event) {
+        event.preventDefault();
+        var nombre1 = parseFloat(document.getElementById("nombre1").value);
+        var nombre2 = parseFloat(document.getElementById("nombre2").value);
+        
+        try {
+          if (isNaN(nombre1) || isNaN(nombre2)) {
+            throw new Error("Les deux nombres doivent être des chiffres");
+          }
+          if (nombre2 === 0) {
+            throw new Error("Division par zéro impossible");
+          }
+          var resultat = nombre1 / nombre2;
+          document.getElementById("message").innerHTML = "Le résultat de la division est : " + resultat;
+        } catch (erreur) {
+          document.getElementById("message").innerHTML = erreur.message;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.chatbox {
+	width: 400px;
+	height: 500px;
+	border: 1px solid #ccc;
+	margin: 50px auto;
+	padding: 10px;
+}
+
+.messages {
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.messages ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.messages li {
+	margin-bottom: 10px;
+}
+
+.username {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.input {
+	margin-top: 10px;
+	display: flex;
+}
+
+.input input {
+	flex: 1;
+	padding: 5px;
+	font-size: 16px;
+}
+
+.input button {
+	padding: 5px 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda</title>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="Accueil.html">Accueil</a></li>
+        <li><a href="Cybersecurite.html">Cybersecurite</a></li>
+        <li><a id="haut">Agenda</a></li>
+        <li><a href="./Infos.html">Infos</a></li>
+        <li><a href="./Contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!--
+https://www.youtube.com/watch?v=nkA9T_MQA7M
+https://www.youtube.com/watch?v=JrGMgc7wjvU
+https://offradranch.com/fr/sports/11335-dave-rienzi-6-fast-facts-about-dwayne-johnsons-personal-trainer.html
+https://www.tecmint.com/wp-content/uploads/2015/06/Black-and-White-Linux-Logo.png
+https://www.masalledesport.com/actualites?page=1
+https://www.proxymadesign.com/
+https://www.espacefitness.ca/blogue/
+https://www.scalzodesign.be/contact
+https://www.sortlist.fr/blog/page-en-construction/
+https://garyvaynerchuk.com/
+-->
+<header>
+    <img src="" alt="hum homme qui fait de la boxe">
+    <h1>
+        Sport, Motivation, Nutrition.
+    </h1>
+    <p>
+        Voici comment je gere ma vie
+    </p>
+    <img src="" alt="hum homme qui bois un caffee">
+</header>
+
+
+<section>
+
+    <form>
+        <label for="month">Mois :</label>
+        <select id="month" name="month" onchange="updateCalendar()">
+            <option value="1">Janvier</option>
+            <option value="2">Février</option>
+            <option value="3">Mars</option>
+            <option value="4">Avril</option>
+            <option value="5">Mai</option>
+            <option value="6">Juin</option>
+            <option value="7">Juillet</option>
+            <option value="8">Août</option>
+            <option value="9">Septembre</option>
+            <option value="10">Octobre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Décembre</option>
+        </select>
+    </form>
+
+
+    <br>
+
+
+    <table>
+        <thead id="calendrier_semaine">
+        <tr>
+            <th>Lun</th>
+            <th>Mar</th>
+            <th>Mer</th>
+            <th>Jeu</th>
+            <th>Ven</th>
+            <th>Sam</th>
+            <th>Dim</th>
+        </tr>
+        </thead>
+        <tbody id="calendrier_jours">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="day">
+                1
+            </td>
+            <td class="day">
+                2
+            </td>
+            <td class="day">
+                3
+            </td>
+        </tr>
+        <tr>
+            <td class="day">
+                4
+            </td>
+            <td class="day">
+                5
+            </td>
+            <td class="day">
+                6
+            </td>
+            <td class="day">
+                7
+            </td>
+            <td class="day">
+                8
+            </td>
+            <td class="day">
+                9
+            </td>
+            <td class="day">
+                10
+            </td>
+        </tr>
+        <tr>
+            <td class="day">
+                11
+            </td>
+            <td class="day">
+                12
+            </td>
+            <td class="day">
+                13
+            </td>
+            <td class="day">
+                14
+            </td>
+            <td class="day">
+                15
+            </td>
+            <td class="day">
+                16
+            </td>
+            <td class="day">
+                17
+            </td>
+        </tr>
+        <tr>
+            <td class="day">
+                18
+            </td>
+            <td class="day">
+                19
+            </td>
+            <td class="day">
+                20
+            </td>
+            <td class="day">
+                21
+            </td>
+            <td class="day">
+                22
+            </td>
+            <td class="day">
+                23
+            </td>
+            <td class="day">
+                24
+            </td>
+        </tr>
+        <tr>
+            <td class="day">
+                25
+            </td>
+            <td class="day">
+                26
+            </td>
+            <td class="day">
+                27
+            </td>
+            <td class="day">
+                28
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<aside>
+
+    <article>
+        <header>
+            <h3>
+                1
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h3>
+                2
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h3>
+                3
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    //citation et motivation
+    <blockquote>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius provident non quisquam sequi amet
+            quasi
+            et vitae voluptatum rerum similique iusto, quam nemo doloremque fuga dolorum animi, repudiandae aperiam!
+        </p>
+    </blockquote>
+
+    <article>
+        <header>
+            <h3>
+                4
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h3>
+                5
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h3>
+                6
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    //citation et motivation
+    <blockquote>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius provident non quisquam sequi amet
+            quasi
+            et vitae voluptatum rerum similique iusto, quam nemo doloremque fuga dolorum animi, repudiandae aperiam!
+        </p>
+    </blockquote>
+
+    <article>
+        <header>
+            <h3>
+                7
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h3>
+                8
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+    <article>
+        <header>
+            <h3>
+                9
+            </h3>
+        </header>
+        <section>
+            <p>
+                7h00 - Email
+                10h00 - Cours
+                14h00 - Avancement projet
+            </p>
+        </section>
+    </article>
+
+</aside>
+
+
+<p>
+    Ps: etant donner que je n'ai pas encore apris a implementer du javascript je ne
+    pourrais pas effectuer une interaction entre le choix de moix et l'affichage
+    d'un callendrier representatif. Je met tous de meme un exemple representatif
+    de l'utilisation d'un tableau.
+</p>
+
+
+<footer>
+    <p>Tags : <a href="#">tag1</a>, <a href="#">tag2</a>, <a href="#">tag3</a></p>
+    <p>Partager cet article sur les réseaux sociaux :</p>
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+    </ul>
+
+    <a href="#ancreAccueil"><img src="" alt="Image de fleche qui fait laction de retourner vers le haut de page"></a>
+
+    <p>&copy; Copyright 2023 Kevin Da Silva</p>
+    <p><a href="mailto:kevdasilva@hotmail.com">kevdasilva@hotmail.com</a></p>
+</footer>
+
+</body>
+</html>

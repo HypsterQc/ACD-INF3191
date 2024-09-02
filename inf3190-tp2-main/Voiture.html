@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="./final.js"></script>
+        <title>Voiture</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="./Accueil.html">
+                <img src="" alt="Logo" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="./Accueil.html">Accueil</a></li>
+                    <li><a href="./Voiture.html">Voiture</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            
+            <div>
+                <h1>Voiture</h1>
+                <p>Formulaire d'inscription</p>
+            </div>
+            
+            <div id="all_question">
+                <div>
+                    <p>Bonjour, je mappele Boby et je serais votre representent d'assurance.</p>
+                    <p>Commencons par vous posez quelque question.</p>
+                </div>
+                <form name="inscription">
+                    <p>Quel est votre genre?</p>
+
+                    <div>
+                        <label>
+                            <input
+                                type="radio"
+                                name="genre"
+                                value="homme"
+                                onclick="validationGenre()" />Homme
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="genre"
+                                value="femme"
+                                onclick="validationGenre()" />Femme
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="genre"
+                                value="autre"
+                                onclick="validationGenre()" />Autre
+                        </label>
+                        <p id="err_genre"></p>
+                    </div>
+
+                    <br /><br />
+
+                    <div id="question1" style="display: none">
+                        <label for="age">Quel est votre âge?</label>
+                        <input
+                            type="number"
+                            name="age"
+                            id="age"
+                            placeholder="Veuillez entrer un nombre"
+                            onchange="confirmer_age()" />
+                    </div>
+                    <p id="err_age" style="display: none"></p>
+
+                    <br /><br />
+
+                    <div id="question2" style="display: none">
+                        <label for="valeur_achat"
+                            >Quelle est la valeur d'achat de votre véhicule?</label
+                        >
+                        <input
+                            type="number"
+                            name="valeur_achat"
+                            id="valeur_achat"
+                            placeholder="----,-- $"
+                            onchange="confirmer_Valeur_Achat()" />
+                    </div>
+                    <p id="err_valeur_achat" style="display: none"></p>
+
+                    <br /><br />
+
+                    <div id="question3" style="display: none">
+                        <label for="annee_fabrication"
+                            >Quelle est l'année de fabrication de votre véhicule?</label
+                        >
+                        <input
+                            type="number"
+                            name="annee_fabrication"
+                            id="annee_fabrication"
+                            placeholder="Annee"
+                            onchange="confirmer_Annee()" />
+                    </div>
+                    <p id="err_annee" style="display: none"></p>
+
+                    <br /><br />
+
+                    <div id="question4" style="display: none">
+                        <label for="reclamations"
+                            >Avez-vous fait des réclamations d'assurance auto dans les 6 dernières
+                            années?</label
+                        >
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="reclamations"
+                                value="oui"
+                                onclick="confirmer_Reclamations()" />Oui
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="reclamations"
+                                value="non"
+                                onclick="confirmer_Reclamations()" />Non
+                        </label>
+                    </div>
+                    <p id="err_reclamations" style="display: none"></p>
+
+                    <br /><br />
+
+                    <div id="question5" style="display: none">
+                        <label for="nb_reclamations"
+                            >Combien de réclamations avez-vous faites?</label
+                        >
+
+                        <input
+                            type="number"
+                            name="nb_reclamations"
+                            id="nb_reclamations"
+                            placeholder="Veuillez entrer un nombre"
+                            onchange="confirmer_Nb_Reclamations()" />
+                    </div>
+                    <p id="err_nb_reclamations" style="display: none"></p>
+
+                    <br /><br />
+
+                    <div id="montant_reclamations">
+                        <!--Pour la réclamation 'x', quel montant avez-vous réclamé?-->
+
+                        <div id="question5.1" style="display: none">
+                            <label for="valeur_reclamations"
+                                >Quel est le montant de votre reclamation 1?</label
+                            >
+                            <input
+                                type="number"
+                                name="valeur_reclamations"
+                                id="valeur_reclamations1"
+                                placeholder="Veuillez entrer un nombre"
+                                onchange="confirme_Valeur_Reclamation1()"
+                                onblur="confirme_Valeur_Reclamation1()" />
+                        </div>
+                        <p id="err_valeur_reclamations1" style="display: none"></p>
+
+                        <div id="question5.2" style="display: none">
+                            <label for="valeur_reclamations"
+                                >Quel est le montant de votre reclamation 2?</label
+                            >
+                            <input
+                                type="number"
+                                name="valeur_reclamations"
+                                id="valeur_reclamations2"
+                                placeholder="Veuillez entrer un nombre"
+                                onchange="confirme_Valeur_Reclamation2()"
+                                onblur="confirme_Valeur_Reclamation2()" />
+                        </div>
+                        <p id="err_valeur_reclamations2" style="display: none"></p>
+
+                        <div id="question5.3" style="display: none">
+                            <label for="valeur_reclamations"
+                                >Quel est le montant de votre reclamation 3?</label
+                            >
+                            <input
+                                type="number"
+                                name="valeur_reclamations"
+                                id="valeur_reclamations3"
+                                placeholder="Veuillez entrer un nombre"
+                                onchange="confirme_Valeur_Reclamation3()"
+                                onblur="confirme_Valeur_Reclamation3()" />
+                        </div>
+                        <p id="err_valeur_reclamations3" style="display: none"></p>
+
+                        <div id="question5.4" style="display: none">
+                            <label for="valeur_reclamations"
+                                >Quel est le montant de votre reclamation 4?</label
+                            >
+                            <input
+                                type="number"
+                                name="valeur_reclamations"
+                                id="valeur_reclamations4"
+                                placeholder="Veuillez entrer un nombre"
+                                onchange="confirme_Valeur_Reclamation4()"
+                                onblur="confirme_Valeur_Reclamation4()" />
+                        </div>
+                        <p id="err_valeur_reclamations4" style="display: none"></p>
+                    </div>
+
+                    <br />
+
+                    <button type="button" value="inscription" onclick="validate_Form_Final()">
+                        Soumission
+                    </button>
+                </form>
+            </div>
+
+            <div id="question10" style="display: none">
+                <img src="" alt="">
+                <p id="msg_final"></p>
+                <button>Retourner a l'Accueil</button>
+                <button>Faire une Nouvelle Soumission</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; Copyright 2023 Kevin Da Silva, Danny Nguyen Thai Mine</p>
+        </footer>
+    </body>
+</html>
